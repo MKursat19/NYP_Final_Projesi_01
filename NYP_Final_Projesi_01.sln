@@ -4,12 +4,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.14.36915.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FOP.Business", "FOP.Business\FOP.Business.csproj", "{2F97754D-5304-4677-8FC9-8CA8943DDFB9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6AE388B1-81F9-402D-899F-9860C597FAE1} = {6AE388B1-81F9-402D-899F-9860C597FAE1}
+		{BA043753-0FC9-4D28-920D-894EA3B36589} = {BA043753-0FC9-4D28-920D-894EA3B36589}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FOP.DataAccess", "FOP.DataAccess\FOP.DataAccess.csproj", "{6AE388B1-81F9-402D-899F-9860C597FAE1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BA043753-0FC9-4D28-920D-894EA3B36589} = {BA043753-0FC9-4D28-920D-894EA3B36589}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FOP.Entities", "FOP.Entities\FOP.Entities.csproj", "{BA043753-0FC9-4D28-920D-894EA3B36589}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FOP.UI", "FOP.UI\FOP.UI.csproj", "{1273A0BB-4052-4974-A00D-30C677AE119B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2F97754D-5304-4677-8FC9-8CA8943DDFB9} = {2F97754D-5304-4677-8FC9-8CA8943DDFB9}
+		{BA043753-0FC9-4D28-920D-894EA3B36589} = {BA043753-0FC9-4D28-920D-894EA3B36589}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

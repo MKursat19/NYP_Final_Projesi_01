@@ -9,13 +9,13 @@ namespace FOP.Entities
     public class DüsmanOzellikleri : Karakter_Base
     {
         public int YanmaSuresi { get; set; }
-        public DüsmanOzellikleri(string isim, int maxCan, int SaldıGucu, double kritikSansi, int dusenXp)
+        public DüsmanOzellikleri(string isim, int maxCan, int SaldırıGucu, double kiritikSansi, int dusenXp)
         {
             İsim = isim;
             MaxCan = maxCan;
             Can = maxCan;
-            SaldırıGücü = SaldıGucu;
-            KiritikSansi = kritikSansi;
+            SaldırıGücü = SaldırıGucu;
+            KiritikSansi = kiritikSansi;
             Xp = dusenXp;
             YanmaSuresi = 0;
             SavunmaGücü = 0;
