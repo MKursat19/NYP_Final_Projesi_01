@@ -12,9 +12,10 @@ namespace FOP.Entities
         public int Can { get; set; }
         public int MaxCan { get; set; }
         public int Mana { get; set; }
-        public int xp { get; set; }
+        public int Xp { get; set; }
         public int SaldırıGücü { get; set; }
         public int SavunmaGücü { get; set; }
+        public Double KiritikSansi { get; set; }
 
     }
 }
