@@ -14,6 +14,8 @@ namespace FOP.Entities
         public int Seviye { get; set; } = 1;
         public int MaxXP { get; set; } = 100;
         public bool OzelYetenekKullanildiMi { get; set; } = false;
+        public int SilahSeviyesi { get; set; } = 1;
+        public bool OzelYetenekAcildiMi { get; set; } = false;
     }
 
 }

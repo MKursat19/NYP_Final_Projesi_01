@@ -18,16 +18,16 @@ namespace FOP.Business
             bool kritikMi = false;
             int vurulacakHasar = saldirgan.SaldırıGücü;
 
-            // Kritik İhtimali Hesaplama
+          
             if (rnd.NextDouble() <= saldirgan.KiritikSansi)
             {
                 kritikMi = true;
                 vurulacakHasar *= 2;
             }
 
-            // Savunma (Zırh) Mekaniği
+         
             int netHasar = vurulacakHasar - hedef.SavunmaGücü;
-            if (netHasar < 0) netHasar = 0; // Hasar eksiye düşmesin diye kontrol
+            if (netHasar < 0) netHasar = 0;
 
             hedef.Can -= netHasar;
 
@@ -45,15 +45,27 @@ namespace FOP.Business
 
         public void SavasciGucPatlamasi(Savasci savasci, DüsmanOzellikleri hedef)
         {
-            savasci.OzelYetenekKullanildiMi = false; // Gücünü boşalttığı için bayrağı indiriyoruz
+           
+            savasci.OzelYetenekKullanildiMi = false;
+
+          
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("\n[ÖFKE PATLAMASI] Savaşçı biriktirdiği güçle peş peşe 3 kez saldırıyor!");
+            Console.WriteLine("\n[ÖFKE PATLAMASI] Savaşçı biriktirdiği gücü serbest bırakıyor! Peş peşe 3 ölümcül darbe!");
             Console.ResetColor();
 
-            // Peş peşe 3 kere düz saldırı metodunu çağırıyoruz
+          
             for (int i = 1; i <= 3; i++)
             {
-                Console.Write($"{i}. Vuruş:");
+               
+                if (hedef.Can <= 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    Console.WriteLine($"* {hedef.İsim} parçalandı! {i}. vuruşa gerek kalmadı. *");
+                    Console.ResetColor();
+                    break;
+                }
+
+                Console.Write($"\n{i}. Darbe: ");
                 DuzSaldiriYap(savasci, hedef);
             }
         }

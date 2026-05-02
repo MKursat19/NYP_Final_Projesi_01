@@ -15,22 +15,36 @@ namespace FOP.Business
         {
             if (saldirgan is Savasci savasci)
             {
+                
+                if (savasci.OzelYetenekKullanildiMi)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("\n[HATA] Zaten öfke topladın! Kılıcını savurmak için menüden 'Düz Saldırı' seçeneğini kullanmalısın.");
+                    Console.ResetColor();
+                    return false; // Tur geçmez
+                }
+
+               
                 if (savasci.Mana >= 20)
                 {
                     savasci.Mana -= 20;
                     savasci.OzelYetenekKullanildiMi = true;
 
                     Console.ForegroundColor = ConsoleColor.Cyan;
-                    // Savaşçının odaklanma yeteneği için yazı
-                    Console.WriteLine();
-                    // Savaşçının odaklanma yeteneği için yazı
-                    Console.WriteLine();
+                    Console.WriteLine("\n[YETENEK: ODAKLANMA] Savaşçı derin bir nefes aldı ve kaslarını gerdi!");
+                    Console.WriteLine("Bu tur saldırı yapmıyorsun, ancak bir sonraki 'Düz Saldırı' hamlende düşmana 3 KERE vuracaksın!");
                     Console.ResetColor();
-                    return false; // Tur geçmez
+
+                    return true; 
                 }
-                // Yeterli mana yok
-                Console.WriteLine();
-                return false;
+                else
+                {
+                   E
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"\n[HATA] Bu yetenek için yeterli manan yok! (Gereken: 20, Sende olan: {savasci.Mana})");
+                    Console.ResetColor();
+                    return false; 
+                }
             }
             else if (saldirgan is Okcu okcu)
             {
