@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+	<ItemGroup>
+		<ProjectReference Include="..\FOP.Entities\FOP.Entities.csproj" />
+		<ProjectReference Include="..\FOP.Business\FOP.Business.csproj" />
+	</ItemGroup>
+
 </Project>

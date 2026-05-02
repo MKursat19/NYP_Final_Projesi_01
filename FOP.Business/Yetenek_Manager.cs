@@ -26,7 +26,7 @@ namespace FOP.Business
                     // Savaşçının odaklanma yeteneği için yazı
                     Console.WriteLine();
                     Console.ResetColor();
-                    return true;
+                    return false; // Tur geçmez
                 }
                 // Yeterli mana yok
                 Console.WriteLine();
