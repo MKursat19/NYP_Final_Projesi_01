@@ -26,8 +26,9 @@ namespace FOP.Business
             }
             karakter.CanPotuAdedi--;
             karakter.Can = Math.Min(karakter.MaxCan, karakter.Can + 50);
-            Console.WriteLine();
             //can 50 artar.
+            Console.WriteLine();
+          
         }
 
         public void ManaPotuKullan(Karakterler karakter)

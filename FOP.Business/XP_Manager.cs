@@ -14,7 +14,8 @@ namespace FOP.Business
         {
             karakter.Xp += kazanilanXp;
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine($"\n[TECRÜBE] +{kazanilanXp} XP! (Toplam: {karakter.Xp}/{karakter.MaxXP})");
+            // XP kazanıldığında kullanıcıya bilgi verelim
+            Console.WriteLine();
             Console.ResetColor();
 
             while (karakter.Xp >= karakter.MaxXP)
@@ -33,8 +34,10 @@ namespace FOP.Business
             karakter.SavunmaGücü += 2;
 
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine($"\n*** SEVİYE ATLADIN! → Seviye {karakter.Seviye} ***");
-            Console.WriteLine($"MaxCan: {karakter.MaxCan} | Saldırı: {karakter.SaldırıGücü} | Savunma: {karakter.SavunmaGücü}");
+            // Seviye atlandığında kullanıcıya bilgi verelim
+            Console.WriteLine();
+            // Seviye atlandığında karakterin yeni özelliklerini gösterelim
+            Console.WriteLine();
             Console.ResetColor();
         }
     }
