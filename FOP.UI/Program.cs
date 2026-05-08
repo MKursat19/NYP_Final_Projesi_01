@@ -12,7 +12,6 @@ namespace FOP.UI
     {
         static void Main(string[] args)
         {
-            
             Console.Title = "Ankara'nın Karanlık Yüzü - NYP Final Projesi";
 
             Console.ForegroundColor = ConsoleColor.Red;
@@ -51,7 +50,9 @@ namespace FOP.UI
                     oyuncu = new Buyucu { İsim = isim };
                     break;
                 default:
-                    Console.WriteLine("\n[HATA] Yanlış tuşa bastın ama acelen var sanırım. Seni Savaşçı olarak atıyoruz!");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("\n[HATA] Yanlış tuşa bastın. Seni Savaşçı olarak atıyoruz!");
+                    Console.ResetColor();
                     oyuncu = new Savasci { İsim = isim };
                     break;
             }
@@ -64,8 +65,8 @@ namespace FOP.UI
             Console.Clear();  
 
            
-            MapManager map = new MapManager();
-            map.HaritayiAc(oyuncu);
+            Harita anaHarita = new Harita();
+            anaHarita.HaritayiAc(oyuncu);
         }
     }
 }
