@@ -1,5 +1,6 @@
 ﻿using FOP.Entities;
 using FOP.Entities.Karakter_Sınıfları;
+using FOP.UI.Map_Manager.Ulus;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,7 +36,7 @@ namespace FOP.UI
 
             string sinifSecimi = Console.ReadLine();
 
-           
+          
             Karakterler oyuncu = null;
 
             switch (sinifSecimi)
@@ -61,11 +62,11 @@ namespace FOP.UI
             Console.WriteLine($"Ulus Meydanı'na doğru yola çıkıyorsun {oyuncu.İsim}...");
 
             Console.WriteLine("\nOyuna başlamak için bir tuşa bas...");
-            Console.ReadKey(); 
-            Console.Clear();  
+            Console.ReadKey();
+            Console.Clear();
 
-           
-            Harita anaHarita = new Harita();
+          
+            Ulus_Harita anaHarita = new Ulus_Harita();
             anaHarita.HaritayiAc(oyuncu);
         }
     }

@@ -39,7 +39,7 @@ namespace FOP.Business
                 }
                 else
                 {
-                   E
+                   
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine($"\n[HATA] Bu yetenek için yeterli manan yok! (Gereken: 20, Sende olan: {savasci.Mana})");
                     Console.ResetColor();

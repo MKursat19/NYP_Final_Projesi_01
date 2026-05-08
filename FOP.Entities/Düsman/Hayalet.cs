@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace FOP.Entities.Düsman
 {
-    public class Goblin : DüsmanOzellikleri
+    public class Hayalet : DüsmanOzellikleri
     {
-        public Goblin() : base("Goblin", 60, 20, 0.1, 40) { }
-
+        public Hayalet() : base("Hayalet", 60, 20, 0.1, 40) { }
     }
 }

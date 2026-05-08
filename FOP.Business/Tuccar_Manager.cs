@@ -10,8 +10,8 @@ namespace FOP.Business
 {
     public class Tuccar_Manager
     {
-        private int canPotuFiyati = 40;
-        private int manaPotuFiyati = 40;
+        private int canPotuFiyati = 20;
+        private int manaPotuFiyati = 25;
 
         public void CanPotuSatinAl(Karakterler karakter)
         {

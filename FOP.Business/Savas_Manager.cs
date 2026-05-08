@@ -146,6 +146,24 @@ namespace FOP.Business
             }
             else
             {
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine("\n**************************************************");
+                Console.WriteLine("          KAHRAMANIN SON YOLCULUĞU                ");
+                Console.WriteLine("**************************************************");
+                Console.ResetColor();
+
+                Console.WriteLine($"\nMaalesef {oyuncu.İsim}, {dusman.İsim} karşısında diz çöktün.");
+                Console.WriteLine("\n--- SON İSTATİSTİKLERİN ---");
+                Console.WriteLine($">> Seviye: {oyuncu.Seviye}");
+                Console.WriteLine($">> Toplanan Altın: {oyuncu.Altin}");
+                Console.WriteLine($">> Alınan Toplam XP: {oyuncu.Xp}");
+
+                Console.WriteLine("\nOyun sonlandırılıyor. Çıkmak için bir tuşa bas...");
+                Console.ReadKey();
+
+                Environment.Exit(0);
+
                 return false;
             }
         }

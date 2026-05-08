@@ -8,7 +8,7 @@ namespace FOP.Entities.Düsman
 {
     public class Zombi : DüsmanOzellikleri
     {
-        public Zombi() : base("Zombi", 45, 25, 0.2, 50) { }
+        public Zombi() : base("Zombi", 55, 25, 0.2, 50) { }
     
     }
 }
