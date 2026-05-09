@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FOP.Entities
+namespace FOP.Entities.Abstract
 {
-    public class Karakterler : Karakter_Base
+    public abstract class Karakterler : Karakter_Base
     {
         public int Altin { get; set; }
         public int CanPotuAdedi { get; set; }

@@ -1,5 +1,5 @@
 ﻿using FOP.Business;
-using FOP.Entities;
+using FOP.Entities.Abstract;
 using FOP.Entities.Düsman;
 using System;
 using System.Collections.Generic;

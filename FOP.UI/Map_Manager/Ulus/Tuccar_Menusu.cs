@@ -1,5 +1,5 @@
 ﻿using FOP.Business;
-using FOP.Entities;
+using FOP.Entities.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;

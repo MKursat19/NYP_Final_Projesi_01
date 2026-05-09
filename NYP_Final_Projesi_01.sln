@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FOP.UI", "FOP.UI\FOP.UI.csp
 		{BA043753-0FC9-4D28-920D-894EA3B36589} = {BA043753-0FC9-4D28-920D-894EA3B36589}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FOP.Core", "FOP.Core\FOP.Core.csproj", "{98344341-0754-4048-8926-09B8B9EACD36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{1273A0BB-4052-4974-A00D-30C677AE119B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1273A0BB-4052-4974-A00D-30C677AE119B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1273A0BB-4052-4974-A00D-30C677AE119B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98344341-0754-4048-8926-09B8B9EACD36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98344341-0754-4048-8926-09B8B9EACD36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98344341-0754-4048-8926-09B8B9EACD36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98344341-0754-4048-8926-09B8B9EACD36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FOP.Entities
+namespace FOP.Entities.Abstract
 {
     public abstract class Karakter_Base
     {
@@ -15,7 +15,7 @@ namespace FOP.Entities
         public int Xp { get; set; }
         public int SaldırıGücü { get; set; }
         public int SavunmaGücü { get; set; }
-        public Double KiritikSansi { get; set; }
+        public double KiritikSansi { get; set; }
 
     }
 }

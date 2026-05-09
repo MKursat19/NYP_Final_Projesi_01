@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FOP.Entities
+namespace FOP.Entities.Abstract
 {
     public abstract class IHarita_Özellik
     {
@@ -17,5 +17,7 @@ namespace FOP.Entities
         public static bool MaceraDevamEdiyor = true;
         public static bool AvmBuyusuKalkti = false;
         public static bool teknolojiMagazasiGezildi = false;
+        public static bool gamaTemizlendi = false;
+        public static bool gamaKasaAcildi = false;
     }
 }

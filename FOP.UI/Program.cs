@@ -1,4 +1,4 @@
-﻿using FOP.Entities;
+﻿using FOP.Entities.Abstract;
 using FOP.Entities.Karakter_Sınıfları;
 using FOP.UI.Map_Manager.Ulus;
 using System;

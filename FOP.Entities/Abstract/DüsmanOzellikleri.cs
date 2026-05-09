@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FOP.Entities
+namespace FOP.Entities.Abstract
 {
-    public class DüsmanOzellikleri : Karakter_Base
+    public abstract class DüsmanOzellikleri : Karakter_Base
     {
         public int YanmaSuresi { get; set; }
         public DüsmanOzellikleri(string isim, int maxCan, int SaldırıGucu, double kiritikSansi, int dusenXp)

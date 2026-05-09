@@ -1,4 +1,5 @@
-﻿using FOP.Entities;
+﻿using FOP.Entities.Abstract;
+using FOP.Entities.Düsman;
 using FOP.UI.Map_Manager.Ulus;
 using System;
 using System.Collections.Generic;
@@ -34,10 +35,12 @@ namespace FOP.UI.Map_Manager.Kizilay
                         // Büyülü Fener Sineması'na git
                         break;
                     case "2":
-                        // Gama İş Merkezi'ne git
+                       Gama_Is_Merkezi gama_Is_Merkezi = new Gama_Is_Merkezi();
+                        gama_Is_Merkezi.MenuAc(oyuncu);
                         break;
                     case "3":
-                        // Kızılay Awm'ye git
+                        Kizilay_Awm kizilay_Awm = new Kizilay_Awm();
+                        kizilay_Awm.MenuAc(oyuncu);
                         break;
                     case "4":
 
