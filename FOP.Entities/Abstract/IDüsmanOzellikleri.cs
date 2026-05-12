@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace FOP.Entities.Abstract
 {
-    public abstract class DüsmanOzellikleri : Karakter_Base
+    public abstract class IDüsmanOzellikleri : IKarakterler
     {
         public int YanmaSuresi { get; set; }
-        public DüsmanOzellikleri(string isim, int maxCan, int SaldırıGucu, double kiritikSansi, int dusenXp)
+        public IDüsmanOzellikleri(string isim, int maxCan, int SaldırıGucu, double kiritikSansi, int dusenXp)
         {
             İsim = isim;
             MaxCan = maxCan;

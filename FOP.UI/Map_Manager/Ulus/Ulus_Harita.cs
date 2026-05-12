@@ -1,4 +1,5 @@
 ﻿using FOP.Entities.Abstract;
+using FOP.UI.Map_Manager.Ozellik;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace FOP.UI.Map_Manager.Ulus
 {
     public class Ulus_Harita : IHarita_Özellik
     {
-        public void HaritayiAc(Karakterler oyuncu)
+        public void HaritayiAc(IKarakterler oyuncu)
         {
             while (MaceraDevamEdiyor)
             {

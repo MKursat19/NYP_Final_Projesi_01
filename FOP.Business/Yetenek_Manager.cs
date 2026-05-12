@@ -9,9 +9,12 @@ using FOP.Entities.Abstract;
 
 namespace FOP.Business
 {
+    /// <summary>
+    /// Yetenek_Manager, karakterlerin özel yeteneklerini kullanmasını ve bu yeteneklerin etkilerini yönetir.
+    /// </summary>
     public class Yetenek_Manager
     {
-        public bool OzelYetenekKullan(Karakterler saldirgan, DüsmanOzellikleri hedef, Saldiri_Manager saldiriManager)
+        public bool OzelYetenekKullan(IKarakterler saldirgan, IDüsmanOzellikleri hedef, Saldiri_Manager saldiriManager)
         {
             if (saldirgan is Savasci savasci)
             {

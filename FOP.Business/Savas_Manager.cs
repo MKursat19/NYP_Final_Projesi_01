@@ -8,6 +8,11 @@ using System.Threading.Tasks;
 
 namespace FOP.Business
 {
+    /// <summary>
+    ///  Savaş sürecini yöneten sınıf.
+    ///  Oyuncunun saldırı, özel yetenek kullanımı, pot kullanımı gibi hamlelerini alır ve düşmanın saldırılarını yönetir. 
+    ///  Savaşın kazanılması veya kaybedilmesi durumlarını kontrol eder ve sonuçları oyuncuya bildirir.
+    /// </summary>
     public class Savas_Manager
     {
         Saldiri_Manager saldiriManager = new Saldiri_Manager();
@@ -15,7 +20,7 @@ namespace FOP.Business
         Pot_Manager potManager = new Pot_Manager();
         XP_Manager xpManager = new XP_Manager();
 
-        public bool SavasBaslat(Karakterler oyuncu, DüsmanOzellikleri dusman)
+        public bool SavasBaslat(IKarakterler oyuncu, IDüsmanOzellikleri dusman)
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Red;
@@ -82,7 +87,7 @@ namespace FOP.Business
                             else 
                             {
                                 Console.ForegroundColor = ConsoleColor.Red;
-                                Console.WriteLine("\n[KİLİTLİ] İçindeki kadim gücü henüz uyandıramadın! (Bunun için Roma Hamamı'ndaki yazıtları incelemelisin)");
+                                Console.WriteLine("\n[KİLİTLİ] İçindeki kadim gücü henüz uyandıramadın!");
                                 Console.ResetColor();
                                 turGecti = false; 
                             }
@@ -168,7 +173,7 @@ namespace FOP.Business
             }
         }
 
-        private void DusmanSaldırısı(DüsmanOzellikleri dusman, Karakterler oyuncu)
+        private void DusmanSaldırısı(IDüsmanOzellikleri dusman, IKarakterler oyuncu)
         {
             
             int netHasar = dusman.SaldırıGücü - oyuncu.SavunmaGücü;

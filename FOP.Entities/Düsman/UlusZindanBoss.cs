@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FOP.Entities.Düsman
 {
-    public class UlusZindanBoss : DüsmanOzellikleri
+    public class UlusZindanBoss : IDüsmanOzellikleri
     {
         public UlusZindanBoss() : base("Zindan Bekçisi (BOSS)", 200, 40, 0.15, 250) { }
     

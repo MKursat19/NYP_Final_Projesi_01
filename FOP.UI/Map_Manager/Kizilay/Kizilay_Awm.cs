@@ -13,7 +13,7 @@ namespace FOP.UI.Map_Manager.Kizilay
     {
         XP_Manager xpManager = new XP_Manager();
 
-        public void MenuAc(Karakterler oyuncu)
+        public void MenuAc(IKarakterler oyuncu)
         {
             bool avmde = true;
             while (avmde)

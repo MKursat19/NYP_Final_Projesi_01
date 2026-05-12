@@ -6,12 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FOP.UI.Map_Manager.Ulus
+namespace FOP.UI.Map_Manager.Ozellik
 {
     public class Tuccar_Menusu
     {
         Tuccar_Manager tuccarManager = new Tuccar_Manager();
-        public void MenuAc(Karakterler oyuncu)
+        public void MenuAc(IKarakterler oyuncu)
         {
             bool dukkandaMi = true;
             while (dukkandaMi)

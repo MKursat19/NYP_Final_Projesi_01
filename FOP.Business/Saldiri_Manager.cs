@@ -9,11 +9,14 @@ using FOP.Entities.Abstract;
 
 namespace FOP.Business
 {
+    /// <summary>
+    /// Saldırı ve özel yeteneklerin hasar hesaplamalarını yöneten sınıf. Kritik vuruş, zırh emilimi ve özel yeteneklerin etkilerini içerir.
+    /// </summary>
     public class Saldiri_Manager
     {
         private Random rnd = new Random();
 
-        public void DuzSaldiriYap(Karakterler saldirgan, DüsmanOzellikleri hedef)
+        public void DuzSaldiriYap(IKarakterler saldirgan, IDüsmanOzellikleri hedef)
         {
             bool kritikMi = false;
             int vurulacakHasar = saldirgan.SaldırıGücü;
@@ -43,7 +46,7 @@ namespace FOP.Business
             }
         }
 
-        public void SavasciGucPatlamasi(Savasci savasci, DüsmanOzellikleri hedef)
+        public void SavasciGucPatlamasi(Savasci savasci, IDüsmanOzellikleri hedef)
         {
            
             savasci.OzelYetenekKullanildiMi = false;

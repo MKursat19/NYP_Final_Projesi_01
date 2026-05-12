@@ -2,6 +2,7 @@
 using FOP.Entities.Abstract;
 using FOP.Entities.Düsman;
 using FOP.Entities.Karakter_Sınıfları;
+using FOP.UI.Map_Manager.Ozellik;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace FOP.UI.Map_Manager.Ulus
     {
         Savas_Manager savasManager = new Savas_Manager();
 
-        public void MenuAc(Karakterler oyuncu)
+        public void MenuAc(IKarakterler oyuncu)
         {
             bool tbmmde = true;
             while (tbmmde)

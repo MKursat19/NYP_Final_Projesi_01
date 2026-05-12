@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FOP.Entities.Karakter_Sınıfları
 {
-    public class Buyucu : Karakterler
+    public class Buyucu : IKarakterler
     {
         public Buyucu()
         {

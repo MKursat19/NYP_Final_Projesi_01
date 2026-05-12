@@ -15,7 +15,7 @@ namespace FOP.UI.Map_Manager.Kizilay
         XP_Manager xpManager = new XP_Manager();
         Labirent_Manager labirentManager = new Labirent_Manager();
 
-        public void OyunuBaslat(Karakterler oyuncu)
+        public void OyunuBaslat(IKarakterler oyuncu)
         {
             int asama = 1;
             bool labirentte = true;

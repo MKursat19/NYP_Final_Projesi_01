@@ -15,7 +15,7 @@ namespace FOP.UI.Map_Manager.Ulus
     {
        Savas_Manager savasManager = new Savas_Manager();
 
-        public void MenuAc(Karakterler oyuncu)
+        public void MenuAc(IKarakterler oyuncu)
         {
             bool hamamda = true;
             while (hamamda)

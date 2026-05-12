@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FOP.Entities.Karakter_Sınıfları
 {
-    public class Okcu : Karakterler
+    public class Okcu : IKarakterler
     {
         public Okcu()
         {

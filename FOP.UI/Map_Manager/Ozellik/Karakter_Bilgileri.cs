@@ -7,14 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FOP.UI.Map_Manager.Ulus
+namespace FOP.UI.Map_Manager.Ozellik
 {
     public class Karakter_Bilgileri
     {
         Pot_Manager potManager = new Pot_Manager();
-        Savas_Manager savasManager = new Savas_Manager();
+        
 
-        public void MenuAc(Karakterler oyuncu)
+        public void MenuAc(IKarakterler oyuncu)
         {
             bool menude = true;
             while (menude)

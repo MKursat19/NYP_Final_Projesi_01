@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace FOP.Entities.Düsman
 {
-    public class Iskelet : IDüsmanOzellikleri
+    public class UrukHai : IDüsmanOzellikleri
     {
-        public Iskelet() : base("İskelet", 40, 30, 0.3, 35) { }
-    
+        public UrukHai() : base("Uruk-Hai Savaşçısı", 150, 30, 0.10, 120) { }
     }
 }

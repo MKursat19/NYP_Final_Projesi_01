@@ -8,14 +8,15 @@ using System.Threading.Tasks;
 
 namespace FOP.Business
 {
-    public class Labirent_Manager 
+    /// <summary>
+    /// Oyuncunun verdiği cevabın o aşama için doğru olup olmadığını kontrol eden metot
+    /// </summary>
+    /// <param name="asama">Kontrol edilecek aşama numarası</param>
+    /// <param name="cevap">Oyuncunun verdiği cevap</param>
+    public class Labirent_Manager
     {
-        /// <summary>
-        /// Oyuncunun verdiği cevabın o aşama için doğru olup olmadığını kontrol eden metot
-        /// </summary>
-        /// <param name="asama">Kontrol edilecek aşama numarası
-        /// <param name="cevap">Oyuncunun verdiği cevap
-        
+
+
         public bool CevapDogruMu(int asama, string cevap)
         {
             // 1. Aşamanın doğru cevabı: 2 (Aşağı İnen Merdiven)

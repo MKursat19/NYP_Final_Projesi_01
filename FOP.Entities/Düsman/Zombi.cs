@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FOP.Entities.Düsman
 {
-    public class Zombi : DüsmanOzellikleri
+    public class Zombi : IDüsmanOzellikleri
     {
         public Zombi() : base("Zombi", 55, 25, 0.2, 50) { }
     

@@ -10,7 +10,12 @@ namespace FOP.Business
 {
     public class XP_Manager
     {
-        public void XpKazan(Karakterler karakter, int kazanilanXp)
+        /// <summary>
+        /// Karakterin XP kazanmasını sağlar ve seviye atlamasını kontrol eder.
+        /// </summary>
+        /// <param name="karakter">XP kazanacak karakter
+        /// <param name="kazanilanXp">Kazanılan XP miktarı
+        public void XpKazan(IKarakterler karakter, int kazanilanXp)
         {
             karakter.Xp += kazanilanXp;
             Console.ForegroundColor = ConsoleColor.Cyan;
@@ -22,7 +27,7 @@ namespace FOP.Business
                 SeviyeAtla(karakter);
         }
 
-        private void SeviyeAtla(Karakterler karakter)
+        private void SeviyeAtla(IKarakterler karakter)
         {
             karakter.Xp -= karakter.MaxXP;
             karakter.Seviye++;

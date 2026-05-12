@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace FOP.Entities.Düsman
 {
-    public class Iskelet : IDüsmanOzellikleri
+    public class Gama_Boss : IDüsmanOzellikleri
     {
-        public Iskelet() : base("İskelet", 40, 30, 0.3, 35) { }
-    
+        public Gama_Boss() : base("Karanlık Yönetici", 250, 35, 0.15, 100) { }
     }
 }

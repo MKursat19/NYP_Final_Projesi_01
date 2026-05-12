@@ -1,6 +1,6 @@
 ﻿using FOP.Entities.Abstract;
 using FOP.Entities.Düsman;
-using FOP.UI.Map_Manager.Ulus;
+using FOP.UI.Map_Manager.Ozellik;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +11,7 @@ namespace FOP.UI.Map_Manager.Kizilay
 {
     public class Kizilay_Harita : IHarita_Özellik
     {
-        public void HaritayiAc(Karakterler oyuncu)
+        public void HaritayiAc(IKarakterler oyuncu)
         {
             while (MaceraDevamEdiyor)
             {

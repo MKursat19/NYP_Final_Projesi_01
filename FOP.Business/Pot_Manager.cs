@@ -8,9 +8,12 @@ using FOP.Entities.Abstract;
 
 namespace FOP.Business
 {
+    /// <summary>
+    /// Oyuncunun can potu ve mana potu kullanma işlemlerini yöneten sınıf
+    /// </summary>
     public class Pot_Manager
     {
-        public void CanPotuKullan(Karakterler karakter)
+        public void CanPotuKullan(IKarakterler karakter)
         {
             if (karakter.CanPotuAdedi <= 0)
             {
@@ -31,7 +34,7 @@ namespace FOP.Business
           
         }
 
-        public void ManaPotuKullan(Karakterler karakter)
+        public void ManaPotuKullan(IKarakterler karakter)
         {
             if (karakter.ManaPotuAdedi <= 0)
             {

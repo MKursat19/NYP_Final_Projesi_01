@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace FOP.Entities.Abstract
 {
-    public abstract class Karakter_Base
+    public abstract class IKarakterler 
     {
+        public int Altin { get; set; }
+        public int CanPotuAdedi { get; set; }
+        public int ManaPotuAdedi { get; set; }
+        public int Seviye { get; set; } = 1;
+        public int MaxXP { get; set; } = 100;
+        public bool OzelYetenekKullanildiMi { get; set; } = false;
+        public int SilahSeviyesi { get; set; } = 1;
+        public bool OzelYetenekAcildiMi { get; set; } = false;
         public string İsim { get; set; }
         public int Can { get; set; }
         public int MaxCan { get; set; }
@@ -16,6 +24,6 @@ namespace FOP.Entities.Abstract
         public int SaldırıGücü { get; set; }
         public int SavunmaGücü { get; set; }
         public double KiritikSansi { get; set; }
-
     }
+
 }

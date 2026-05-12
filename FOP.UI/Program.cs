@@ -37,7 +37,7 @@ namespace FOP.UI
             string sinifSecimi = Console.ReadLine();
 
           
-            Karakterler oyuncu = null;
+            IKarakterler oyuncu = null;
 
             switch (sinifSecimi)
             {

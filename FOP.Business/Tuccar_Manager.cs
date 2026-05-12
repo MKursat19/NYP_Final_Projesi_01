@@ -8,12 +8,15 @@ using System.Threading.Tasks;
 
 namespace FOP.Business
 {
+    /// <summary>
+    /// Tüccar, oyuncunun altın karşılığında can potu, mana potu ve yeni ekipman satın alabileceği bir sınıftır.
+    /// </summary>
     public class Tuccar_Manager
     {
         private int canPotuFiyati = 20;
         private int manaPotuFiyati = 25;
 
-        public void CanPotuSatinAl(Karakterler karakter)
+        public void CanPotuSatinAl(IKarakterler karakter)
         {
             if (karakter.Altin >= canPotuFiyati)
             {
@@ -32,7 +35,7 @@ namespace FOP.Business
             }
         }
 
-        public void ManaPotuSatinAl(Karakterler karakter)
+        public void ManaPotuSatinAl(IKarakterler karakter)
         {
             if (karakter.Altin >= manaPotuFiyati)
             {
@@ -51,7 +54,7 @@ namespace FOP.Business
             }
         }
 
-        public void YeniEkipmanSatinAl(Karakterler karakter)
+        public void YeniEkipmanSatinAl(IKarakterler karakter)
         {
            
             int yeniEkipmanFiyati = karakter.SilahSeviyesi * 100;

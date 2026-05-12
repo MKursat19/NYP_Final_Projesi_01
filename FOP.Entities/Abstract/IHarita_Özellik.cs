@@ -19,5 +19,10 @@ namespace FOP.Entities.Abstract
         public static bool teknolojiMagazasiGezildi = false;
         public static bool gamaTemizlendi = false;
         public static bool gamaKasaAcildi = false;
+        public static bool gamaBossKesildi = false;
+        public static bool gamaAltKatAcildi = false;
+        public static bool jurassicBitti = false;
+        public static bool lotrBitti = false;
+        public static bool starWarsBitti = false;
     }
 }
