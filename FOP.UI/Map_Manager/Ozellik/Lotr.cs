@@ -12,7 +12,7 @@ namespace FOP.UI.Map_Manager.Ozellik
     public class Lotr : IHarita_Özellik
     {
         Savas_Manager savasManager = new Savas_Manager();
-        public void MenuAc(IKarakterler oyuncu)
+        public void MenuAc(Karakterler oyuncu)
         {
             Console.Clear();
             if (!lotrBitti)

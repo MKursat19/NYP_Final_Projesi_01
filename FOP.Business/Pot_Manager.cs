@@ -13,7 +13,7 @@ namespace FOP.Business
     /// </summary>
     public class Pot_Manager
     {
-        public void CanPotuKullan(IKarakterler karakter)
+        public void CanPotuKullan(Karakterler karakter)
         {
             if (karakter.CanPotuAdedi <= 0)
             {
@@ -34,7 +34,7 @@ namespace FOP.Business
           
         }
 
-        public void ManaPotuKullan(IKarakterler karakter)
+        public void ManaPotuKullan(Karakterler karakter)
         {
             if (karakter.ManaPotuAdedi <= 0)
             {

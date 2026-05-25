@@ -1,4 +1,5 @@
 ﻿using FOP.Entities.Abstract;
+using FOP.UI.Map_Manager.Kizilay;
 using FOP.UI.Map_Manager.Ozellik;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace FOP.UI.Map_Manager.Ulus
 {
     public class Ulus_Harita : IHarita_Özellik
     {
-        public void HaritayiAc(IKarakterler oyuncu)
+        public void HaritayiAc(Karakterler oyuncu)
         {
             while (MaceraDevamEdiyor)
             {
@@ -30,7 +31,7 @@ namespace FOP.UI.Map_Manager.Ulus
                     Console.WriteLine("4. Kızılay (AÇIK)");
                     Console.ResetColor();
                 }
-                else
+                else if (!bossKesildi)
                 {
                     Console.ForegroundColor = ConsoleColor.DarkGray;
                     Console.WriteLine("4. Kızılay (KAPALI - Ulus Zindanı'ndaki tehlikeyi temizlemeden buraya geçemezsin!)");
@@ -64,6 +65,8 @@ namespace FOP.UI.Map_Manager.Ulus
                             Console.WriteLine("\nKızılay Meydanı'na adım attın... ");
                             Console.WriteLine("Devam etmek için bir tuşa bas...");
                             Console.ReadKey();
+                            Kizilay_Harita kizilay = new Kizilay_Harita();
+                            kizilay.HaritayiAc(oyuncu);
                         }
                         else
                         {

@@ -16,7 +16,7 @@ namespace FOP.Business
         private int canPotuFiyati = 20;
         private int manaPotuFiyati = 25;
 
-        public void CanPotuSatinAl(IKarakterler karakter)
+        public void CanPotuSatinAl(Karakterler karakter)
         {
             if (karakter.Altin >= canPotuFiyati)
             {
@@ -35,7 +35,7 @@ namespace FOP.Business
             }
         }
 
-        public void ManaPotuSatinAl(IKarakterler karakter)
+        public void ManaPotuSatinAl(Karakterler karakter)
         {
             if (karakter.Altin >= manaPotuFiyati)
             {
@@ -54,7 +54,7 @@ namespace FOP.Business
             }
         }
 
-        public void YeniEkipmanSatinAl(IKarakterler karakter)
+        public void YeniEkipmanSatinAl(Karakterler karakter)
         {
            
             int yeniEkipmanFiyati = karakter.SilahSeviyesi * 100;

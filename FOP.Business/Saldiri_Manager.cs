@@ -16,7 +16,7 @@ namespace FOP.Business
     {
         private Random rnd = new Random();
 
-        public void DuzSaldiriYap(IKarakterler saldirgan, IDüsmanOzellikleri hedef)
+        public void DuzSaldiriYap(Karakterler saldirgan, IDüsmanOzellikleri hedef)
         {
             bool kritikMi = false;
             int vurulacakHasar = saldirgan.SaldırıGücü;

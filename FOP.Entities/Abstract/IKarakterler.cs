@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FOP.Entities.Abstract
 {
-    public abstract class IKarakterler 
+    public  class Karakterler 
     {
         public int Altin { get; set; }
         public int CanPotuAdedi { get; set; }

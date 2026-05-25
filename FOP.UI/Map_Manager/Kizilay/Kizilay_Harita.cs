@@ -11,7 +11,7 @@ namespace FOP.UI.Map_Manager.Kizilay
 {
     public class Kizilay_Harita : IHarita_Özellik
     {
-        public void HaritayiAc(IKarakterler oyuncu)
+        public void HaritayiAc(Karakterler oyuncu)
         {
             while (MaceraDevamEdiyor)
             {
@@ -32,7 +32,8 @@ namespace FOP.UI.Map_Manager.Kizilay
                 switch (secim)
                 { 
                     case "1":
-                        // Büyülü Fener Sineması'na git
+                        Buyulu_Fener_Sinemasi buyulu_Fener_Sinemasi = new Buyulu_Fener_Sinemasi();
+                        buyulu_Fener_Sinemasi.MenuAc(oyuncu);
                         break;
                     case "2":
                        Gama_Is_Merkezi gama_Is_Merkezi = new Gama_Is_Merkezi();

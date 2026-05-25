@@ -13,7 +13,7 @@ namespace FOP.UI.Map_Manager.Kizilay
     {
         XP_Manager xpManager = new XP_Manager();
 
-        public void MenuAc(IKarakterler oyuncu)
+        public void MenuAc(Karakterler oyuncu)
         {
             bool avmde = true;
             while (avmde)
@@ -55,9 +55,9 @@ namespace FOP.UI.Map_Manager.Kizilay
                 else
                 {
                     Console.WriteLine("Büyü kalktı! AVM artık sessiz ve güvenli. Mağazaları gezebilirsin.");
-                    Console.WriteLine("1. Teknoloji Mağazası (Ganimet Ara)");
-                    Console.WriteLine("2. Yemek Katı (Can Yenile)");
-                    Console.WriteLine("3. Giyim Mağazası (Zırh Ara)");
+                    Console.WriteLine("1. Teknoloji Mağazası ");
+                    Console.WriteLine("2. Yemek Katı ");
+                    Console.WriteLine("3. Giyim Mağazası ");
                     Console.WriteLine("0. Kızılay Meydanı'na Dön");
                     Console.Write("Seçim: ");
 

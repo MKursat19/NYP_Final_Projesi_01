@@ -1,4 +1,6 @@
-﻿using FOP.Entities.Abstract;
+﻿using FOP.DataAccess.Abstract;
+using FOP.DataAccess.Concrete;
+using FOP.Entities.Abstract;
 using FOP.Entities.Karakter_Sınıfları;
 using FOP.UI.Map_Manager.Ulus;
 using System;
@@ -13,6 +15,8 @@ namespace FOP.UI
     {
         static void Main(string[] args)
         {
+            IKarakterDAL karakterDAL = new InMemoryKarakterDAL();
+
             Console.Title = "Ankara'nın Karanlık Yüzü - NYP Final Projesi";
 
             Console.ForegroundColor = ConsoleColor.Red;
@@ -36,8 +40,8 @@ namespace FOP.UI
 
             string sinifSecimi = Console.ReadLine();
 
-          
-            IKarakterler oyuncu = null;
+
+            Karakterler oyuncu = karakterDAL.GetirKarakter();
 
             switch (sinifSecimi)
             {

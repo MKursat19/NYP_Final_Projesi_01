@@ -14,7 +14,7 @@ namespace FOP.Business
     /// </summary>
     public class Yetenek_Manager
     {
-        public bool OzelYetenekKullan(IKarakterler saldirgan, IDüsmanOzellikleri hedef, Saldiri_Manager saldiriManager)
+        public bool OzelYetenekKullan(Karakterler saldirgan, IDüsmanOzellikleri hedef, Saldiri_Manager saldiriManager)
         {
             if (saldirgan is Savasci savasci)
             {

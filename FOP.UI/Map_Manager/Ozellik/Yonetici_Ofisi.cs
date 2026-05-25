@@ -14,7 +14,7 @@ namespace FOP.UI.Map_Manager.Ozellik
         Savas_Manager savasManager = new Savas_Manager();
         XP_Manager xpManager = new XP_Manager();
          
-        public void MenuAc(IKarakterler oyuncu)
+        public void MenuAc(Karakterler oyuncu)
         {
             Console.Clear();
             if (!gamaBossKesildi)

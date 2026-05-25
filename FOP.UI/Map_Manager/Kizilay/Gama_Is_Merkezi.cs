@@ -13,7 +13,7 @@ namespace FOP.UI.Map_Manager.Kizilay
 {
     public class Gama_Is_Merkezi : IHarita_Özellik
     {
-        public void MenuAc(IKarakterler oyuncu)
+        public void MenuAc(Karakterler oyuncu)
         {
             bool gamada = true;
             while (gamada)

@@ -12,7 +12,7 @@ namespace FOP.UI.Map_Manager.Ozellik
     public class Jurassic_World : IHarita_Özellik
     {
         Savas_Manager savas_Manager = new Savas_Manager();
-        public void MenuAc(IKarakterler oyuncu)
+        public void MenuAc(Karakterler oyuncu)
         {
             Console.Clear();
             if (!jurassicBitti)

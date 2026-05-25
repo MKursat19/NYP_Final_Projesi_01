@@ -11,7 +11,7 @@ namespace FOP.UI.Map_Manager.Ozellik
     public class Tuccar_Menusu
     {
         Tuccar_Manager tuccarManager = new Tuccar_Manager();
-        public void MenuAc(IKarakterler oyuncu)
+        public void MenuAc(Karakterler oyuncu)
         {
             bool dukkandaMi = true;
             while (dukkandaMi)

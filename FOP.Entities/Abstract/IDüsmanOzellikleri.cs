@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FOP.Entities.Abstract
 {
-    public abstract class IDüsmanOzellikleri : IKarakterler
+    public abstract class IDüsmanOzellikleri : Karakterler
     {
         public int YanmaSuresi { get; set; }
         public IDüsmanOzellikleri(string isim, int maxCan, int SaldırıGucu, double kiritikSansi, int dusenXp)

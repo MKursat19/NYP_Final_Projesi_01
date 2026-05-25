@@ -11,7 +11,7 @@ namespace FOP.UI.Map_Manager.Kizilay
 {
     public class Buyulu_Fener_Sinemasi : IHarita_Özellik
     {
-        public void MenuAc(IKarakterler oyuncu)
+        public void MenuAc(Karakterler oyuncu)
         {
             bool sinemada = true;
             while (sinemada)

@@ -20,7 +20,7 @@ namespace FOP.Business
         Pot_Manager potManager = new Pot_Manager();
         XP_Manager xpManager = new XP_Manager();
 
-        public bool SavasBaslat(IKarakterler oyuncu, IDüsmanOzellikleri dusman)
+        public bool SavasBaslat(Karakterler oyuncu, IDüsmanOzellikleri dusman)
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Red;
@@ -39,12 +39,12 @@ namespace FOP.Business
 
                 bool turGecti = false;
 
-                
+
                 if (oyuncu is Savasci s && s.OzelYetenekKullanildiMi)
                 {
                     Console.WriteLine("\n[SİSTEM] Savaşçı gücünü topladı ve saldırıya geçiyor!");
 
-                   
+
                     saldiriManager.SavasciGucPatlamasi(s, dusman);
                     turGecti = true;
 
@@ -54,17 +54,18 @@ namespace FOP.Business
                 }
                 else
                 {
-                   
+
                     Console.WriteLine("1. Düz Saldırı Yap");
 
-                  
+
                     if (oyuncu.OzelYetenekAcildiMi)
                         Console.WriteLine("2. Özel Yetenek Kullan");
-                    else
+                    else if (!oyuncu.OzelYetenekAcildiMi)
+                    {
                         Console.ForegroundColor = ConsoleColor.DarkGray;
-                    Console.WriteLine("2. Özel Yetenek Kullan (KİLİTLİ - Gücünü Uyandırman Gerek)");
-                    Console.ResetColor();
-
+                        Console.WriteLine("2. Özel Yetenek Kullan (KİLİTLİ - Gücünü Uyandırman Gerek)");
+                        Console.ResetColor();
+                    }
                     Console.WriteLine("3. Can Potu İç");
                     Console.WriteLine("4. Mana Potu İç");
                     Console.Write("Hamlen nedir? Seçim: ");
@@ -79,17 +80,17 @@ namespace FOP.Business
                             turGecti = true;
                             break;
                         case "2":
-                           
+
                             if (oyuncu.OzelYetenekAcildiMi)
                             {
                                 turGecti = yetenekManager.OzelYetenekKullan(oyuncu, dusman, saldiriManager);
                             }
-                            else 
+                            else if (!oyuncu.OzelYetenekAcildiMi)
                             {
                                 Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine("\n[KİLİTLİ] İçindeki kadim gücü henüz uyandıramadın!");
                                 Console.ResetColor();
-                                turGecti = false; 
+                                turGecti = false;
                             }
                             break;
                         case "3":
@@ -109,10 +110,10 @@ namespace FOP.Business
                     }
                 }
 
-             
+
                 if (dusman.Can > 0 && turGecti)
                 {
-                    
+
                     if (dusman.YanmaSuresi > 0)
                     {
                         Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -122,7 +123,7 @@ namespace FOP.Business
                         Console.ResetColor();
                     }
 
-                   
+
                     if (dusman.Can > 0)
                     {
                         DusmanSaldırısı(dusman, oyuncu);
@@ -130,7 +131,7 @@ namespace FOP.Business
                 }
             }
 
-         
+
             if (oyuncu.Can > 0)
             {
                 Console.ForegroundColor = ConsoleColor.Cyan;
@@ -173,9 +174,9 @@ namespace FOP.Business
             }
         }
 
-        private void DusmanSaldırısı(IDüsmanOzellikleri dusman, IKarakterler oyuncu)
+        private void DusmanSaldırısı(IDüsmanOzellikleri dusman, Karakterler oyuncu)
         {
-            
+
             int netHasar = dusman.SaldırıGücü - oyuncu.SavunmaGücü;
             if (netHasar < 0) netHasar = 0;
 

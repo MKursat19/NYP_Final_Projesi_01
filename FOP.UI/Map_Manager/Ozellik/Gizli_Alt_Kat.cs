@@ -9,7 +9,7 @@ namespace FOP.UI.Map_Manager.Ozellik
 {
     public class Gizli_Alt_Kat : IHarita_Özellik
     {
-        public void MenuAc(IKarakterler oyuncu)
+        public void MenuAc(Karakterler oyuncu)
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.DarkBlue;

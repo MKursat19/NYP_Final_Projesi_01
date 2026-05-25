@@ -14,7 +14,7 @@ namespace FOP.UI.Map_Manager.Ozellik
         Pot_Manager potManager = new Pot_Manager();
         
 
-        public void MenuAc(IKarakterler oyuncu)
+        public void MenuAc(Karakterler oyuncu)
         {
             bool menude = true;
             while (menude)

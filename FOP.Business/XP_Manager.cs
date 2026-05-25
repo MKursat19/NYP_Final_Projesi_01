@@ -15,7 +15,7 @@ namespace FOP.Business
         /// </summary>
         /// <param name="karakter">XP kazanacak karakter
         /// <param name="kazanilanXp">Kazanılan XP miktarı
-        public void XpKazan(IKarakterler karakter, int kazanilanXp)
+        public void XpKazan(Karakterler karakter, int kazanilanXp)
         {
             karakter.Xp += kazanilanXp;
             Console.ForegroundColor = ConsoleColor.Cyan;
@@ -27,7 +27,7 @@ namespace FOP.Business
                 SeviyeAtla(karakter);
         }
 
-        private void SeviyeAtla(IKarakterler karakter)
+        private void SeviyeAtla(Karakterler karakter)
         {
             karakter.Xp -= karakter.MaxXP;
             karakter.Seviye++;
