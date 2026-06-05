@@ -25,5 +25,6 @@ namespace FOP.Entities
         public bool LotrBitti { get; set; }
         public bool StarWarsBitti { get; set; }
 
+
     }
 }

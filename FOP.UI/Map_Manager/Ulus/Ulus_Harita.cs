@@ -1,4 +1,6 @@
-﻿using FOP.Entities.Abstract;
+﻿using FOP.Business;
+using FOP.DataAccess.Concrete;
+using FOP.Entities.Abstract;
 using FOP.UI.Map_Manager.Kizilay;
 using FOP.UI.Map_Manager.Ozellik;
 using System;
@@ -11,6 +13,7 @@ namespace FOP.UI.Map_Manager.Ulus
 {
     public class Ulus_Harita : IHarita_Özellik
     {
+        OyunKayitManager kayitManager = new OyunKayitManager(new JsonOyunKayitDal());
         public void HaritayiAc(Karakterler oyuncu)
         {
             while (MaceraDevamEdiyor)
@@ -24,7 +27,7 @@ namespace FOP.UI.Map_Manager.Ulus
                 Console.WriteLine("2. Roma Hamamı");
                 Console.WriteLine("3. I. TBMM Binası");
 
-               
+
                 if (bossKesildi)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
@@ -39,6 +42,7 @@ namespace FOP.UI.Map_Manager.Ulus
                 }
 
                 Console.WriteLine("5. Karakter Durumu (İstatistikleri Gör)");
+                Console.WriteLine("9. Oyunu Kaydet");
                 Console.WriteLine("0. Oyunu Kapat");
                 Console.Write("\nNereye gitmek istiyorsun? Seçim: ");
 
@@ -48,7 +52,7 @@ namespace FOP.UI.Map_Manager.Ulus
                 {
                     case "1":
                         Ankara_kalesi kale = new Ankara_kalesi();
-                        kale.MenuAc(oyuncu); 
+                        kale.MenuAc(oyuncu);
                         break;
                     case "2":
                         Roma_Hamami hamam = new Roma_Hamami();
@@ -56,7 +60,7 @@ namespace FOP.UI.Map_Manager.Ulus
                         break;
                     case "3":
                         Tbmm_Menusu tbmm = new Tbmm_Menusu();
-                        tbmm.MenuAc(oyuncu); 
+                        tbmm.MenuAc(oyuncu);
                         break;
                     case "4":
                         if (bossKesildi)
@@ -76,9 +80,25 @@ namespace FOP.UI.Map_Manager.Ulus
                         }
                         break;
                     case "5":
-                        
+
                         Karakter_Bilgileri karakterBilgileri = new Karakter_Bilgileri();
                         karakterBilgileri.MenuAc(oyuncu);
+                        break;
+                    case "9":
+                        var ulusKayit = kayitManager.OyunuKaydet();
+                        if (ulusKayit.Success)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("\n[BİLGİ] İlerlemen Ulus'un tarihi sokaklarında güvenle kaydedildi!");
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("\n[HATA] " + ulusKayit.Message);
+                        }
+                        Console.ResetColor();
+                        Console.WriteLine("Devam etmek için bir tuşa bas...");
+                        Console.ReadKey();
                         break;
                     case "0":
                         MaceraDevamEdiyor = false;

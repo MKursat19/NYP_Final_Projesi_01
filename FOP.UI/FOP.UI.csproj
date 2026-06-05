@@ -8,6 +8,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\FOP.Core\FOP.Core.csproj" />
 		<ProjectReference Include="..\FOP.DataAccess\FOP.DataAccess.csproj" />
 		<ProjectReference Include="..\FOP.Entities\FOP.Entities.csproj" />
 		<ProjectReference Include="..\FOP.Business\FOP.Business.csproj" />

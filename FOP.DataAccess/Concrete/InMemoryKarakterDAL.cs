@@ -68,5 +68,10 @@ namespace FOP.DataAccess.Concrete
                 
             }
         }
+
+        public void KarakterEkle()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

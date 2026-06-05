@@ -72,16 +72,6 @@ namespace FOP.DataAccess.Concrete
                 return new ErrorResult("Yükleme başarısız: " + ex.Message);
             }
         }
-
-        IResult IOyunKayitDal.OyunuKaydet()
-        {
-            throw new NotImplementedException();
-        }
-
-        IResult IOyunKayitDal.OyunuYukle()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
 

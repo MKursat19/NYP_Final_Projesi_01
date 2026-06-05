@@ -9,7 +9,7 @@ namespace FOP.DataAccess.Abstract
 {
     public interface IKarakterDAL
     {
-        void KarakterEkle(Karakterler karakter);
+        void KarakterEkle();
 
         Karakterler GetirKarakter();
     }

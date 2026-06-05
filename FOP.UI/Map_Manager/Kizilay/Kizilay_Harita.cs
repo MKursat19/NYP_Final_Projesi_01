@@ -1,4 +1,6 @@
-﻿using FOP.Entities.Abstract;
+﻿using FOP.Business;
+using FOP.DataAccess.Concrete;
+using FOP.Entities.Abstract;
 using FOP.Entities.Düsman;
 using FOP.UI.Map_Manager.Ozellik;
 using System;
@@ -9,8 +11,10 @@ using System.Threading.Tasks;
 
 namespace FOP.UI.Map_Manager.Kizilay
 {
+
     public class Kizilay_Harita : IHarita_Özellik
-    {
+    { 
+        OyunKayitManager kayitManager = new OyunKayitManager(new JsonOyunKayitDal());
         public void HaritayiAc(Karakterler oyuncu)
         {
             while (MaceraDevamEdiyor)
@@ -24,19 +28,20 @@ namespace FOP.UI.Map_Manager.Kizilay
                 Console.WriteLine("2. Gama İş Merkezi");
                 Console.WriteLine("3. Kızılay Awm");
                 Console.WriteLine("4. Karakter Durumu (İstatistikleri Gör)");
+                Console.WriteLine("9. Oyunu Kaydet");
                 Console.WriteLine("0. Oyunu Kapat");
                 Console.Write("\nNereye gitmek istiyorsun? Seçim: ");
 
                 string secim = Console.ReadLine();
 
                 switch (secim)
-                { 
+                {
                     case "1":
                         Buyulu_Fener_Sinemasi buyulu_Fener_Sinemasi = new Buyulu_Fener_Sinemasi();
                         buyulu_Fener_Sinemasi.MenuAc(oyuncu);
                         break;
                     case "2":
-                       Gama_Is_Merkezi gama_Is_Merkezi = new Gama_Is_Merkezi();
+                        Gama_Is_Merkezi gama_Is_Merkezi = new Gama_Is_Merkezi();
                         gama_Is_Merkezi.MenuAc(oyuncu);
                         break;
                     case "3":
@@ -47,6 +52,22 @@ namespace FOP.UI.Map_Manager.Kizilay
 
                         Karakter_Bilgileri karakterBilgileri = new Karakter_Bilgileri();
                         karakterBilgileri.MenuAc(oyuncu);
+                        break;
+                    case "9":
+                        var kizilayKayit = kayitManager.OyunuKaydet();
+                        if (kizilayKayit.Success)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("\n[BİLGİ] İlerlemen Kızılay Meydanı'nda güvenle kaydedildi!");
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("\n[HATA] " + kizilayKayit.Message);
+                        }
+                        Console.ResetColor();
+                        Console.WriteLine("Devam etmek için bir tuşa bas...");
+                        Console.ReadKey();
                         break;
                     case "0":
                         MaceraDevamEdiyor = false;
